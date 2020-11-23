@@ -8,8 +8,11 @@ Add slack bot app in your workspace and insert API key in slackbot file
 ## Usage
 
 **Help**
+
 	slackbot -h
+	
 **Send Message**
+
 	slackbot -c channel -m message
 
 ## Troubleshoot
