@@ -2,6 +2,9 @@
 
 Python program to use directly in terminal for send messages or command output to slack channels
 
+## Prerequisite:
+pip install slackclient
+
 ## Configure
 Add slack bot app in your workspace and insert API key in slackbot file
 
