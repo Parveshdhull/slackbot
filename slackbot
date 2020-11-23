@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+
+from slack import WebClient
+import argparse
+
+api_token = 'API_TOKEN_HERE'
+
+def get_arguments():
+	parser = argparse.ArgumentParser()
+	parser.add_argument("-c", "--channel", dest="channel", help="Slack Channel")
+	parser.add_argument("-m", "--message", dest="message", help="Message")
+	arguments = parser.parse_args()
+	return arguments
+
+def send_message(channel, message):
+	client = WebClient(api_token)
+	try:
+	    response = client.chat_postMessage(
+	        channel='#'+channel,
+	        text=message)
+	except Exception as e:
+		print(e)
+
+arguments = get_arguments()
+
+channel = arguments.channel
+message = arguments.message
+
+send_message(channel, message)
