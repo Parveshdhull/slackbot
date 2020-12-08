@@ -17,6 +17,9 @@ Add slack bot app in your workspace and insert API key in slackbot file
 **Send Message**
 
 	slackbot -c channel -m message
+	
+## YouTube Tutorial
+https://www.youtube.com/watch?v=iPO_bYutY0M
 
 ## Troubleshoot
 
