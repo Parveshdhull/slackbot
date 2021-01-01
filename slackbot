@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 from slack import WebClient
-import argparse
+import argparse, sys
+
 
 api_token = 'API_TOKEN_HERE'
 
@@ -20,6 +21,8 @@ def send_message(channel, message):
 	        text=message)
 	except Exception as e:
 		print(e)
+		sys.exit(400)  # Returning error code, for use in other programs 
+
 
 arguments = get_arguments()
 
